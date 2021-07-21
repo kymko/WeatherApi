@@ -1,0 +1,31 @@
+<resources>
+    <string name="app_name">Weather Api</string>
+    <string name="sunday_19_may_2021_4_30_pm">Sunday,19 May 2021 | 4:30 PM</string>
+    <string name="bishkek_kyrgyzstan">Bishkek, Kyrgyzstan</string>
+    <string name="sunny">Sunny</string>
+    <string name="degree">33</string>
+    <string name="maxDegree">35℃</string>
+    <string name="minDegree">27℃</string>
+    <string name="text_humidity">49%</string>
+    <string name="humidity">Humidity</string>
+    <string name="pressure_mBar">1,007mBar</string>
+    <string name="text_pressure">Pressure</string>
+    <string name="wind_23km_h">23km/h</string>
+    <string name="text_wind">Wind</string>
+    <string name="sunrise_6_03_am">6:03 AM</string>
+    <string name="text_sunrise">Sunrise</string>
+    <string name="sunset_8_05_pm">8:05 PM</string>
+    <string name="text_sunset">Sunset</string>
+    <string name="dayTime_13h_1m">13h 1m</string>
+    <string name="text_dayTime">Daytime</string>
+    <string name="first_day_mon_21">Mon,21</string>
+    <string name="first_day_35C">35℃</string>
+    <string name="temp_max_firstDay">26℃</string>
+    <string name="secondDay">Tue,22</string>
+    <string name="temp_max_secondDay">35℃</string>
+    <string name="temp_min_secondDay">27℃</string>
+    <string name="third_day">Wed,23</string>
+    <string name="temp_max_third_day">36℃</string>
+    <string name="temp_min_thirdDay">24℃</string>
+    <string name="content">content</string>
+</resources>

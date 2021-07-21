@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="dimens_sunrise">9sp</dimen>
+    <dimen name="dimens_pressure">9sp</dimen>
+    <dimen name="dimens_wind">9sp</dimen>
+    <dimen name="dimens_sunset">9sp</dimen>
+    <dimen name="dimens_dayTime">9sp</dimen>
+    <dimen name="dimens_firstDay">9sp</dimen>
+    <dimen name="dimens_temp_max_firstDay">9sp</dimen>
+    <dimen name="dimens_temp_max_secondDay">9sp</dimen>
+    <dimen name="dimens_temp_min_nextDay">9sp</dimen>
+    <dimen name="dimens_temp_max_thirdDay">9sp</dimen>
+    <dimen name="dimens_temp_min_thirdDay">9sp</dimen>
+</resources>

@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/parentRelative"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_230sdp"
+        android:background="@drawable/sky_background"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <View
+            android:id="@+id/sun"
+            android:layout_width="@dimen/_46sdp"
+            android:layout_height="@dimen/_46sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="311dp"
+            android:layout_marginTop="17dp"
+            android:background="@drawable/sunn" />
+
+        <View
+            android:id="@+id/cloud_1"
+            android:layout_width="52.5dp"
+            android:layout_height="15.78dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_17sdp"
+            android:layout_marginTop="36dp"
+            android:background="@drawable/clouds" />
+
+        <View
+            android:id="@+id/cloud_2"
+            android:layout_width="@dimen/_91sdp"
+            android:layout_height="18.98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_96sdp"
+            android:layout_marginTop="@dimen/_17sdp"
+            android:background="@drawable/clouds_2" />
+
+        <View
+            android:id="@+id/cloud_3"
+            android:layout_width="@dimen/_91sdp"
+            android:layout_height="18.98dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_37sdp"
+            android:layout_marginTop="@dimen/_91sdp"
+            android:background="@drawable/clouds_3" />
+
+        <View
+            android:id="@+id/cloud_4"
+            android:layout_width="@dimen/_107sdp"
+            android:layout_height="@dimen/_28sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_130sdp"
+            android:layout_marginTop="@dimen/_55sdp"
+            android:background="@drawable/clouds_3" />
+
+        <View
+            android:id="@+id/cloud_5"
+            android:layout_width="@dimen/_53sdp"
+            android:layout_height="@dimen/_18sdp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="@dimen/_250sdp"
+            android:layout_marginTop="@dimen/_84sdp"
+            android:background="@drawable/clouds" />
+
+        
+
+    </RelativeLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="520dp"
+        app:cardCornerRadius="@dimen/_31sdp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/parentRelative">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt_sunday_header"
+                android:layout_width="179sp"
+                android:layout_height="17sp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20sp"
+                android:layout_marginTop="18sp"
+                android:text="@string/sunday_19_may_2021_4_30_pm"
+                android:textAlignment="center"
+                android:textColor="#999999"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:id="@+id/search_container"
+                android:layout_width="@dimen/_147sdp"
+                android:layout_height="@dimen/_38sdp"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/rectangle"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/txt_result_search"
+                    android:layout_width="@dimen/_118sdp"
+                    android:layout_height="@dimen/_20ssp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/_4sdp"
+                    android:layout_marginTop="@dimen/_2ssp"
+                    android:text="@string/bishkek_kyrgyzstan"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:textColor="#0DA0EA"
+                    android:textSize="@dimen/_13ssp" />
+
+                <ImageView
+                    android:id="@+id/place_localizer"
+                    android:layout_width="@dimen/_10sdp"
+                    android:layout_height="@dimen/_15sdp"
+                    android:layout_marginTop="@dimen/_12sdp"
+                    android:src="@drawable/place_localizer"
+                    app:tint="#0D9FEA" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_marginTop="@dimen/_14sdp"
+                android:layout_below="@+id/search_container"
+                >
+
+
+                    <TextView
+                        android:layout_width="@dimen/_70ssp"
+                        android:layout_height="@dimen/_50ssp"
+                        android:text="55"
+                        android:textSize="@dimen/_40ssp"
+                        android:layout_marginStart="@dimen/_43sdp"/>
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_below="@+id/row_1"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/_56ssp"
+                    android:layout_height="match_parent"
+                    android:text="34"
+                    android:textSize="64sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_43sdp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_below="@+id/row_2"
+                >
+                <TextView
+                    android:layout_width="@dimen/_56ssp"
+                    android:layout_height="match_parent"
+                    android:text="34"
+                    android:textSize="64sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_43sdp"
+                    />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_4"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_below="@+id/row_3"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/_56ssp"
+                    android:layout_height="match_parent"
+                    android:text="34"
+                    android:textSize="55sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_43sdp"
+                    />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/row_5"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_50sdp"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/_14sdp"
+
+                android:layout_below="@+id/row_4"
+                >
+
+                <TextView
+                    android:layout_width="@dimen/_56ssp"
+                    android:layout_height="match_parent"
+                    android:text="34"
+                    android:textSize="64sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginStart="@dimen/_43sdp"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
