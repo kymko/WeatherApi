@@ -93,7 +93,7 @@
             android:layout_height="match_parent">
 
             <TextView
-                android:id="@+id/txt_sunday_header"
+                android:id="@+id/current_time"
                 android:layout_width="179sp"
                 android:layout_height="17sp"
                 android:layout_alignParentStart="true"

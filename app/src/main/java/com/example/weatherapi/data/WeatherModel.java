@@ -2,10 +2,6 @@ package com.example.weatherapi.data;
 
 import com.google.gson.annotations.SerializedName;
 
-import java.util.List;
-
-import retrofit2.http.Query;
-
 public class WeatherModel {
 
     @SerializedName("cod")

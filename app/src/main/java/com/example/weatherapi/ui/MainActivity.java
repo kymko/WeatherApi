@@ -4,22 +4,22 @@ import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.text.format.DateFormat;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
-
 import com.example.weatherapi.R;
 import com.example.weatherapi.data.Example;
 import com.example.weatherapi.data.WeatherModel;
 import com.example.weatherapi.databinding.ActivityMainBinding;
 import com.example.weatherapi.internet.RetrofitBuilder;
-import com.example.weatherapi.internet.WeatherApi;
 import com.google.android.material.bottomsheet.BottomSheetBehavior;
-import com.google.android.material.bottomsheet.BottomSheetDialog;
-
+import java.text.DateFormatSymbols;
+import java.util.Calendar;
+import java.util.Date;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -29,6 +29,7 @@ public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding binding;
     private BottomSheetBehavior sheetBehavior;
     private ImageView header_Arrow_Image;
+    String currentDateTimeString = java.text.DateFormat.getDateTimeInstance().format(new Date());
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -41,6 +42,8 @@ public class MainActivity extends AppCompatActivity {
         header_Arrow_Image = findViewById(R.id.bottom_sheet_arrow);
         EditText cityName = findViewById(R.id.edit_enter_city_name);
         Button btnShowResult = findViewById(R.id.btn_show_result);
+
+        binding.currentTime.setText(currentDateTimeString);
 
         btnShowResult.setOnClickListener(new View.OnClickListener() {
 
@@ -112,7 +115,6 @@ public class MainActivity extends AppCompatActivity {
         setRotationForArrow();
     }
 
-
     private void setRotationForArrow() {
         sheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
             @Override
@@ -131,7 +133,6 @@ public class MainActivity extends AppCompatActivity {
         header_Arrow_Image.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
                 if (sheetBehavior.getState() != BottomSheetBehavior.STATE_EXPANDED) {
                     sheetBehavior.setState(BottomSheetBehavior.STATE_EXPANDED);
                 } else {
@@ -141,5 +142,29 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
+    private Runnable mUpdateClockTask = new Runnable() {
+        public void run() {
+            setTime();
+            binding.currentTime.postDelayed(this, 1000);
+        }
+    };
+
+    public void setTime() {
+        Calendar cal = Calendar.getInstance();
+        int minutes = cal.get(Calendar.MINUTE);
+
+        if (DateFormat.is24HourFormat(this)) {
+            int hours = cal.get(Calendar.HOUR_OF_DAY);
+            binding.currentTime.setText((hours < 10 ? "0" + hours : hours) + ":" + (minutes < 10 ? "0" + minutes : minutes));
+            Log.d("tag", "time" + hours);
+            if (hours < 18) {
+                binding.graphic.setImageResource(R.drawable.graphic_night);
+
+            }
+        } else {
+            int hours = cal.get(Calendar.HOUR);
+            binding.currentTime.setText(hours + ":" + (minutes < 10 ? "0" + minutes : minutes) + " " + new DateFormatSymbols().getAmPmStrings()[cal.get(Calendar.AM_PM)]);
+        }
+    }
 
 }

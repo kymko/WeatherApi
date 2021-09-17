@@ -18,6 +18,7 @@ public interface WeatherApi {
     Call<WeatherModel> getWeather(
             @Query("q") String name);
 
+    String url = "api.openweathermap.org/data/2.5/weather?q=London&appid=b211aae5545e8d3de75404d096930c95";
 
 
 }

@@ -3,6 +3,7 @@ package com.example.weatherapi.data;
 import com.google.gson.annotations.SerializedName;
 
 public class Example {
+
     @SerializedName("main")
     WeatherModel model;
 

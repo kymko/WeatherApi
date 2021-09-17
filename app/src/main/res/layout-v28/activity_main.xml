@@ -6,7 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".ui.MainActivity">
 
-
     <RelativeLayout
         android:id="@+id/parentRelative"
         android:layout_width="match_parent"
@@ -16,110 +15,16 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
-        <View
-            android:id="@+id/sun"
-            android:layout_width="@dimen/_46sdp"
-            android:layout_height="@dimen/_46sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="311dp"
-            android:layout_marginTop="17dp"
-            android:background="@drawable/sunn" />
-
-        <View
-            android:id="@+id/cloud_1"
-            android:layout_width="52.5dp"
-            android:layout_height="15.78dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_17sdp"
-            android:layout_marginTop="36dp"
-            android:background="@drawable/clouds" />
-
-        <View
-            android:id="@+id/cloud_2"
-            android:layout_width="@dimen/_91sdp"
-            android:layout_height="18.98dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_96sdp"
-            android:layout_marginTop="@dimen/_17sdp"
-            android:background="@drawable/clouds_2" />
-
-        <View
-            android:id="@+id/cloud_3"
-            android:layout_width="@dimen/_91sdp"
-            android:layout_height="18.98dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_37sdp"
-            android:layout_marginTop="@dimen/_91sdp"
-            android:background="@drawable/clouds_3" />
-
-        <View
-            android:id="@+id/cloud_4"
-            android:layout_width="@dimen/_107sdp"
-            android:layout_height="@dimen/_28sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_130sdp"
-            android:layout_marginTop="@dimen/_55sdp"
-            android:background="@drawable/clouds_3" />
-
-        <View
-            android:id="@+id/cloud_5"
-            android:layout_width="@dimen/_53sdp"
-            android:layout_height="@dimen/_18sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="@dimen/_250sdp"
-            android:layout_marginTop="@dimen/_84sdp"
-            android:background="@drawable/clouds" />
-
-
-        <View
-            android:layout_width="@dimen/_40sdp"
-            android:layout_height="@dimen/_60sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginBottom="-10dp"
-            android:background="@drawable/building" />
-
-        <View
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_100sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_175sdp"
-            android:layout_marginBottom="10dp"
-            android:background="@drawable/skyline" />
-
-        <View
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_70sdp"
+        <ImageView
+            android:id="@+id/graphic"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
             android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
             android:layout_alignParentBottom="true"
-            android:layout_marginBottom="@dimen/_9sdp"
-            android:background="@drawable/office_building" />
-
-        <View
-            android:layout_width="@dimen/_90sdp"
-            android:layout_height="@dimen/_150sdp"
             android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_26sdp"
-            android:layout_marginBottom="-15dp"
-            android:background="@drawable/office_building_2" />
-
-        <View
-            android:layout_width="@dimen/_90sdp"
-            android:layout_height="@dimen/_170sdp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentBottom="true"
-            android:layout_marginStart="@dimen/_100sdp"
-            android:layout_marginBottom="-12dp"
-            android:background="@drawable/buildings" />
-
+            android:layout_marginBottom="-9dp"
+            android:background="@drawable/graphic" />
 
     </RelativeLayout>
 
@@ -138,7 +43,7 @@
 
 
             <TextView
-                android:id="@+id/txt_sunday_header"
+                android:id="@+id/current_time"
                 android:layout_width="179sp"
                 android:layout_height="17sp"
                 android:layout_alignParentStart="true"
@@ -697,7 +602,6 @@
                     android:src="@drawable/ic_down" />
             </RelativeLayout>
 
-
         </RelativeLayout>
 
         <androidx.coordinatorlayout.widget.CoordinatorLayout
@@ -708,9 +612,9 @@
             app:layout_constraintStart_toStartOf="parent">
 
             <include layout="@layout/bottom_sheet" />
+
         </androidx.coordinatorlayout.widget.CoordinatorLayout>
 
     </androidx.cardview.widget.CardView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>
